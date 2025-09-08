@@ -1,0 +1,45 @@
+symbol: BTC/USDT
+timeframe: 15m
+long_only: true
+
+starting_equity: 1000.0
+risk_per_trade: 0.002
+
+fees:
+  maker: 0.001
+  taker: 0.001
+
+sl_pct: 0.0022
+tp_pct: 0.0048 # slightly easier TP than A
+slippage_bps: 1.0
+
+indicators:
+  rsi_period: 14
+  atr_period: 14
+
+order_block:
+  lookahead_n: 6
+  impulse_mult: 1.9 # looser impulse
+  min_body_pct: 0.40 # looser anchor
+
+filters:
+  min_atr_pct: 0.03
+  max_atr_pct: 1.00
+  vol_sma_len: 20
+  vol_min_mult: 1.20
+  max_distance_bps: 8.0
+
+risk:
+  cooldown_bars: 6
+  daily_max_loss: 15.0
+
+exits:
+  time_stop_bars: 5
+  hit_priority: aggressive
+  breakeven:
+    enabled: true
+    trigger_pct: 0.0020
+    plus_bps: 5
+  atr_trail:
+    enabled: true
+    atr_mult: 2.0

@@ -1,0 +1,47 @@
+# --- Python cache & build ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+*.spec
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDE / editor junk ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Data & results ---
+# raw market data (big files, regenerate when needed)
+*.csv
+
+# keep config.yaml and config_punjabi*.yaml
+!config*.yaml
+
+# backtest / sweep outputs
+trades_punjabi.csv
+sweep_results*.csv
+equity_curve*.png
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Notebooks checkpoints ---
+.ipynb_checkpoints/

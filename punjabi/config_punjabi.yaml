@@ -1,0 +1,29 @@
+# config_punjabi.yaml (Updated with Trend Filter)
+
+# Configuration for the "Punjabi's Paid" Scalping Strategy
+data_file: data_btc_15m.csv
+symbol: BTC/USDT
+timeframe: 15m
+
+# --- Financial Parameters ---
+starting_equity: 1000.0
+risk_per_trade: 0.01 # Risk 1% of equity per trade
+taker_fee: 0.00075 # Taker fee for Binance (0.075%)
+
+# --- Strategy Parameters ---
+order_block:
+  lookback_period: 20
+  body_size_mult: 1.5
+  volume_mult: 1.5
+
+# --- Trade Execution Parameters ---
+trade_rules:
+  long_only: false
+  stop_loss_pct: 0.005
+  take_profit_pct: 0.01
+
+# --- (NEW) Trend Filter ---
+# If enabled, the strategy will only take trades in the direction of the long-term trend.
+trend_filter:
+  enabled: true
+  ema_period: 200 # A common period for identifying the long-term trend.
